@@ -22,7 +22,6 @@ class NewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNewBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        viewModel.loadUser()
         setupViewModel()
     }
 
@@ -31,8 +30,8 @@ class NewActivity : AppCompatActivity() {
             Toast.makeText(this, it, Toast.LENGTH_LONG).show()
         })
 
-        viewModel.data.observe(this, {
-            binding.tvUserName.text = it.firstName
+        viewModel.getProfileModel().observe(this, {
+            binding.tvUserName.text = it?.firstName
         })
     }
 }

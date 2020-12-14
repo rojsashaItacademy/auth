@@ -3,6 +3,7 @@ package ru.trinitydigital.auth.ui.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import org.koin.androidx.viewmodel.ext.android.viewModel

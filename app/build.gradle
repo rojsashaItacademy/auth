@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -55,6 +56,9 @@ dependencies {
     def koinVersion = "1.0.2"
     implementation "org.koin:koin-android:$koinVersion"
     implementation "org.koin:koin-androidx-viewmodel:$koinVersion"
+
+    implementation "androidx.room:room-runtime:2.2.5"
+    kapt  "androidx.room:room-compiler:2.2.5"
 
     def livedata_version = "2.2.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$livedata_version"
